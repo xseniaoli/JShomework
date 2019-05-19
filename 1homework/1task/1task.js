@@ -7,11 +7,9 @@ let squareOfOneRidge;
 squareOfOneRidge = 15 * 25;
 
 let totalNumberOfRidges;
-totalNumberOfRidges = allSquare / squareOfOneRidge;
+totalNumberOfRidges = allSquare % squareOfOneRidge;
 
-let residue;
-residue = totalNumberOfRidges % 2;
-console.log(Math.ceil(residue));
+console.log(totalNumberOfRidges + "m2");
 
 //Задача 2
 
@@ -26,30 +24,48 @@ console.log(middleEllipse);
 
 //Задача 3
 
-let a = prompt('Введите значение a');
-let b = prompt('Введите значение b');
-let c = prompt('Введите значение c');
+let a = 3;
+let b = -5;
+let c = 12;
 
 let smallNumber;
-smallNumber = (a < b, a < c ) ? "значение а самое маленькое" : 
-	(b < a, b < c) ? "значение b самое маленькое" :
-	(c < a, c < b) ? "значение c самое маленькое" : "что-то пошло не так";
+if (smallNumber = a < b && a < c ) { 
+	console.log ("значение a самое маленькое");
+} else if (smallNumber = b < a && b < c) {
+	console.log ("значение b самое маленькое");
+} else if (smallNumber = c < a && c < b) {
+	console.log ("значение c самое маленькое");
+} else {
+	console.log ("что-то пошло не так");
+}
 
-console.log (smallNumber);
 
 //Задача 4
 
-let d = prompt('Введите значение m');
-let e = prompt('Введите значение n');
+let d = -8;
+let e = 5;
 const CONST_VALUE = 10;
 
 let m, n, number;
 
-m = (CONST_VALUE - d);
-n =  (CONST_VALUE - e);
+m = parseFloat(CONST_VALUE - d);
+n = parseFloat(CONST_VALUE - e); 
 
-number = (m > n) ? "значение n ближе к 10" : 
-	(n > m) ? "значение m ближе к 10" :
-	"что-то пошло не так";
+if (m > 0) {
+	console.log (m);
+} else {
+	console.log (-m);
+}
 
-console.log(number);
+if (n > 0) {
+	console.log (n);
+} else {
+	console.log (-n);
+}
+
+if (number = m > n) {
+	console.log ('Ближе к 10' + " " + e);
+} else {
+	console.log ('Ближе к 10' + " " + d);
+}
+
