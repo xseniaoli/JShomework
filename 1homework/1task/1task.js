@@ -24,26 +24,23 @@ console.log(middleEllipse);
 
 //Задача 3
 
-let a = 3;
-let b = -5;
-let c = 12;
+let a = -5;
+let b = 13;
+let c = -7;
 
-let smallNumber;
-if (smallNumber = a < b && a < c ) { 
+if (a < b && a < c ) { 
 	console.log ("значение a самое маленькое");
-} else if (smallNumber = b < a && b < c) {
+} else if (b < c) {
 	console.log ("значение b самое маленькое");
-} else if (smallNumber = c < a && c < b) {
-	console.log ("значение c самое маленькое");
 } else {
-	console.log ("что-то пошло не так");
-}
+	console.log ("значение c самое маленькое");
+} 
 
 
 //Задача 4
 
-let d = -8;
-let e = 5;
+let d = 50;
+let e = -20;
 const CONST_VALUE = 10;
 
 let m, n, number;
@@ -52,15 +49,15 @@ m = parseFloat(CONST_VALUE - d);
 n = parseFloat(CONST_VALUE - e); 
 
 if (m > 0) {
-	console.log (m);
+	m = m;
 } else {
-	console.log (-m);
+	m = -m;
 }
 
 if (n > 0) {
-	console.log (n);
+	n = n;
 } else {
-	console.log (-n);
+	n = -n;
 }
 
 if (number = m > n) {
