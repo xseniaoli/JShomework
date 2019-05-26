@@ -11,13 +11,10 @@ console.log(sum);
 // Задача 2
 
 let str2 = "Несу возмездие во имя Луны!";
-let doublestr = "";
-for (let i = 0; i < str2.length; i++) {
-	let double = str2.charAt(i);
-	doublestr += double + double;
-}
+let doublesmb = "Л";
+let doublestr = new RegExp (doublesmb, "ig");
 
-console.log (doublestr);
+console.log (str2.replace(doublestr, doublesmb+doublesmb));
 
 // Задача 3
 
@@ -25,8 +22,9 @@ let pass = prompt("Введите пароль на латинице:");
 
 let small = /(?=.*[a-z])/;
 let large = /(?=.*[A-Z])/;
-let num = /(?=.*[0-9]{3,})/;
+let num = /(?=(.*[0-9]){3,})/;
 let spec = /(?=.*[!@#$%^&*])/;
+let all
 
 
 if (!small.test(pass)) {
