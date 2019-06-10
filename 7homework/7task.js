@@ -42,7 +42,8 @@ displayTime();
 
 // Задача 2
 
-/*let arrProducts = [
+
+let cards = [
 	{
 		photo: "card/card1.jpg",
 		name: "Card 1",
@@ -50,17 +51,41 @@ displayTime();
 	},
 
 	{
-		photo: "card/card2..jpg",
+		photo: "card/card2.jpg",
 		name: "Card 2",
 		description: "Plotva"
 	},
 
 	{
-		photo: "card/card3..jpg",
+		photo: "card/card3.jpg",
 		name: "Card 3",
 		description: "Ivasik"
 	}
-]*/
+];
+
+function products (arr){
+	for (let i = 0; i < arr.length; i++) {
+		let container = document.createElement("div");
+		let image = document.createElement("img");
+		image.src = arr[i].photo;
+		image.style.cssText = "width: 450px; height: 500px";
+		let card = document.createElement("span");
+		card.innerText = arr[i].name;
+		let descr = document.createElement("span");
+		descr.innerText = arr[i].description;
+
+		document.body.appendChild(container);
+		container.appendChild(card);
+		container.appendChild(image);
+		container.appendChild(descr);
+
+		container.style.cssText = "margin: 20px 0 0 50px; display: grid; grid-template-columns: 1fr; grid-template-rows: 40px 1fr 40px;"
+		card.style.cssText = "font-size: 25px; font-weight: bold;"
+		descr.style.cssText = "margin-top: 10px; font-size: 25px;"
+	}
+};
+
+products(cards);
 
 
 
